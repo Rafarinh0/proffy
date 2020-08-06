@@ -68,7 +68,7 @@
 }
 
 .buttons-container a.give-classes:hover {
-    background: var(--color-secundary-dark);
+    background: var(--color-secondary-dark);
 }
 
 .buttons-container a img {
