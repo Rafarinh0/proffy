@@ -19,7 +19,7 @@ function TeacherItem() {
                 Entusiasta dos maiores teoremas da matemática avançada
                         <br />
                 <br />
-                        Apaixonado por errar integrais e por mudar a vida das pessoas por errar o troco do pão
+                        Apaixonado por errar integrais e mudar a vida das pessoas ao errar o troco do pão
                     </p>
 
             <footer>
