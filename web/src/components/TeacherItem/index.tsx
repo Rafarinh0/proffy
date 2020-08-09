@@ -4,28 +4,38 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
-function TeacherItem() {
+export interface Teacher {
+    id: number;
+    avatar: string;
+    bio: string;
+    cost: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+
+}
+
+interface TeacherItemProps {
+    teacher: Teacher,
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://avatars1.githubusercontent.com/u/53065132?s=460&u=c1a20d2916759ec972404717dfdf53324f6f4d5f&v=4" alt="Rafael Marinho" />
+                <img src={teacher.avatar} alt={teacher.name} />
                 <div>
-                    <strong>Rafael Marinho</strong>
-                    <span>Matemática</span>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </header>
 
-            <p>
-                Entusiasta dos maiores teoremas da matemática avançada
-                        <br />
-                <br />
-                        Apaixonado por errar integrais e mudar a vida das pessoas ao errar o troco do pão
-                    </p>
+            <p>{teacher.bio}</p>
 
             <footer>
                 <p>
                     Preço/hora:
-                            <strong>R$ 50,00</strong>
+                    <strong>R$ {teacher.cost}</strong>
                 </p>
 
                 <button type="button">
